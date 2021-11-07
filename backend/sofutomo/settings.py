@@ -83,7 +83,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'sofutomo.wsgi.application'
-ASGI_APPLICATION = 'sofutomo.asgi.application'
 
 CHANNEL_LAYERS = {
     'default': {
