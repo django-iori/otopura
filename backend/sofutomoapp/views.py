@@ -137,7 +137,9 @@ class UploadListView(APIView):
         print(request.user)
         queryset = BandModel.objects.filter(user=request.user)
         serializer = UploadListSerializer(queryset, many=True)
-        return Response(serializer.data)
+        return Response(
+            
+        )
 
 class CheckAuthenticatedView(APIView):
     def get(self, request, format=None):
