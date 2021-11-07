@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-y6nfc_k=e&13!7*e2)kmyn+!(dvf8r8$*zyf66@e0xc!1xr)y%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = ['ec2-13-115-158-166.ap-northeast-1.compute.amazonaws.com']
 
 
 # Application definition
@@ -145,7 +145,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
-STATIC_ROOT = '/usr/share/nginx/html/static'
 
 
 # Default primary key field type
@@ -211,7 +210,3 @@ CSRF_COOKIE_HTTPONLY = False
 CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken", "WWW-Authorization"]
 #クッキー付きの通信を許可
 CORS_ALLOW_CREDENTIALS = True
-
-AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
-AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
-EMAIL_BACKEND = 'django_ses.SESBackend'
