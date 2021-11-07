@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-y6nfc_k=e&13!7*e2)kmyn+!(dvf8r8$*zyf66@e0xc!1xr)y%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ec2-13-115-158-166.ap-northeast-1.compute.amazonaws.com']
+ALLOWED_HOSTS = [
+    'ec2-13-115-158-166.ap-northeast-1.compute.amazonaws.com',
+    '13.115.158.166'
+    ]
 
 
 # Application definition
