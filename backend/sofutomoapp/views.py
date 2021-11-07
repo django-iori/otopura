@@ -16,7 +16,6 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.core.exceptions import ObjectDoesNotExist
-import joblib
 from .models import *
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import loader
@@ -30,7 +29,6 @@ from django.utils.decorators import method_decorator
 from rest_framework.views import APIView
 from rest_framework import permissions
 from django.contrib.auth.mixins import LoginRequiredMixin
-import ast
 from django.middleware.csrf import get_token
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
