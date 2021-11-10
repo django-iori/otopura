@@ -152,7 +152,8 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
     'http://127.0.0.1:8000',
-    'http://localhost:8000'
+    'http://localhost:8000',
+    'http://otopura-frontend.s3-website-ap-northeast-1.amazonaws.com'
 ]
 # レスポンスを公開する
 CORS_ALLOW_CREDENTIALS = True
