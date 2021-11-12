@@ -201,6 +201,6 @@ CSRF_COOKIE_NAME = "csrftoken"
 CSRF_COOKIE_HTTPONLY = False
 
 # 許可するheader
-CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken", "WWW-Authorization"]
+CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken"]
 #クッキー付きの通信を許可
 CORS_ALLOW_CREDENTIALS = True
