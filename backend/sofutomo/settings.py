@@ -142,7 +142,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA＿ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA＿ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA＿ROOT = '/usr/share/nginx/html/media'
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
