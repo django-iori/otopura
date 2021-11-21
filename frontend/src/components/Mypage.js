@@ -17,7 +17,6 @@ export default function Mypage() {
         const fetchData = async() => {
             const response = await Axios.get('views/mypageapi/', {
                 'headers': {
-                    'WWW-Authorization': 'Token ' + Cookies.get('token'),
                     'X-CSRFToken': Cookies.get('csrftoken')
                 }
             });

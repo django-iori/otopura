@@ -1,7 +1,7 @@
 from django.contrib.auth import models
 from rest_framework import serializers
 
-from sofutomoapp.models import HostModel
+from otopuraapp.models import HostModel
 from .models import *
 
 class HostSerializer(serializers.ModelSerializer):
