@@ -65,7 +65,18 @@ class CommentModel(models.Model):
         null=True,
         max_length=1000,
     )
-
+class DMModel(models.Model):
+    #DMした人
+    dm_user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="dm_user")
+    #DMされた人
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="dm_user_1")
+    #DM内容
+    dm = models.TextField(
+        verbose_name='',
+        blank=True,
+        null=True,
+        max_length=1000,
+    )
 
 
 

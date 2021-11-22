@@ -18,7 +18,7 @@ from django.db import router
 from django.urls import path, include, re_path
 from . import settings
 from django.conf.urls.static import static
-from sofutomoapp import apis
+from otopuraapp import apis
 from rest_auth.registration.views import VerifyEmailView
 from django.views.generic import TemplateView
 
@@ -29,7 +29,7 @@ urlpatterns = [
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('admin/', admin.site.urls),
     path('api/', include(apis.router.urls)),
-    path('views/',include('sofutomoapp.urls')),
+    path('views/',include('otopuraapp.urls')),
 
     #SPA用
     path('home/', TemplateView.as_view(template_name='index.html')),
