@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'otopura.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'otopura-db',
+        'NAME': 'otopura-db.csxkjpx6flq9.ap-northeast-1.rds.amazonaws.com',
         'USER': 'shimizu_iori',
         'PASSWORD': 'Softtennis23',
         'HOST': 'otopura-db.csxkjpx6flq9.ap-northeast-1.rds.amazonaws.com',
