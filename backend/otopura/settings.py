@@ -28,7 +28,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     "52.69.196.101",
-    "18.183.17.70"
+    "18.183.17.70",
+    "www.otopura-be.com"
 ]
 
 
