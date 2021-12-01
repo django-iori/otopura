@@ -158,7 +158,7 @@ LOGIN_URL = '/login/'
 
 # 許可するオリジン
 CORS_ORIGIN_WHITELIST = [
-    "https://api.otopura-be.com"
+    "https://otopura-be.com"
 ]
 # レスポンスを公開する
 CORS_ALLOW_CREDENTIALS = True
