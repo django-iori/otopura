@@ -10,7 +10,7 @@ export default function Upload_List() {
 
     const callbackFunction = () => {
         const fetchData = async() => {
-            const response = await axios.get('views/upload_list/');
+            const response = await Axios.get('views/upload_list/');
             console.log(response.data)
             setUpload_List(response.data)
         };

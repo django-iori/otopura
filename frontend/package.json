@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "aws s3 rm s3://otopura-frontend --recursive && aws s3 cp ./build s3://otopura-frontend --recursive"
+    "deploy": "aws s3 rm s3://www.otopura-be.com --recursive && aws s3 cp ./build s3://www.otopura-be.com --recursive"
   },
   "eslintConfig": {
     "extends": [

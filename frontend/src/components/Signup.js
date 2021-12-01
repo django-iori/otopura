@@ -31,11 +31,10 @@ export default function Signup() {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'X-CSRFToken': Cookies.get('csrftoken')
             }
         };
         if (pass_1==pass_2) {
-            const res = await axios.post('views/signup/',{
+            const res = await Axios.post('views/signup/',{
                 username: user, password: pass_1
             }, config)
             if (res.data=='success') {

@@ -1,50 +1,64 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import ReactDOM from 'react-dom';
+import Profile from './Profile';
 import Upload_List from './Upload_list';
 import Good_List from './Good_List';
 import Cookies from 'js-cookie';
 import {Axios} from '../Axios'
+import Header_1 from './Header_1'
+import Login from './Login';
 
 
 
 
 export default function Mypage() {
 
-    const [mydataList, setMydataList] = useState([]);
+    const [profile, setProfile] = useState(true);
+    const [good, setGood] = useState(false);
+    const [upload, setUpload] = useState(false);
 
-    const callbackFunction = () => {
-        const fetchData = async() => {
-            const response = await Axios.get('views/mypageapi/', {
-                'headers': {
-                    'X-CSRFToken': Cookies.get('csrftoken')
-                }
-            });
-            console.log(response.data)
-            setMydataList(response.data)
-        };
-        fetchData();
+    const doProfile = () => {
+        setProfile(true)
+        setGood(false)
+        setUpload(false)
     }
-    useEffect(callbackFunction,[]);
+
+    const doGood = () => {
+        setProfile(false)
+        setGood(true)
+        setUpload(false)
+    }
+
+    const doUpload = () => {
+        setProfile(false)
+        setGood(false)
+        setUpload(true)
+    }
 
 
-    return (
+    console.log(profile)
+    console.log(good)
+    console.log(upload)
+
+    function Component () {
+        if (profile) {
+            return <Profile />;
+        } else if  (good) {
+            return <Good_List />
+        } else if (upload) {
+            return <Upload_List />
+        }
+    }
+
+    return(
         <div>
-        <div class='container'>
-            {mydataList.map((user) => (
-            <div class='card' key={user.id}>
-                <h5 className='card-title'><img src={`${user.image}`} className="img-fluid" /></h5>
-                <div class='card-body'>
-                    <h5 class='card-title'>名前：{user.name}</h5>
-                    <h5 class='card-title'>年齢:{user.age}</h5>
-                    <h5 class='card-title'>好きなジャンル：{user.genre}</h5>
-                    <h5 class='card-title'>好きなアーティスト:{user.artist}</h5>
-                    <h5 class='card-title'>住所:{user.address}</h5>
-                    <h5 class='card-title'>パート:{user.part}</h5>
-                </div>
-            </div>
-            ))}
+            <div className='btn btn-primary' onClick={doProfile}>Profile</div>
+            <div className='btn btn-primary' onClick={doGood}>Good</div>
+            <div className='btn btn-primary' onClick={doUpload}>upload</div>
+            <Component />
         </div>
-        </div>
+
     )
 }
+
