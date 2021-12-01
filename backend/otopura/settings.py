@@ -27,9 +27,7 @@ SECRET_KEY = 'django-insecure-y6nfc_k=e&13!7*e2)kmyn+!(dvf8r8$*zyf66@e0xc!1xr)y%
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "52.69.196.101",
-    "18.183.17.70",
-    "www.otopura-be.com"
+    "api.otopura-be.com"
 ]
 
 
@@ -94,10 +92,10 @@ WSGI_APPLICATION = 'otopura.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'otopura_db',
+        'NAME': 'otopura_sql',
         'USER': 'shimizu_iori',
         'PASSWORD': 'Softtennis23',
-        'HOST': 'otopura-db.csxkjpx6flq9.ap-northeast-1.rds.amazonaws.com',
+        'HOST': 'otopura-sql.csxkjpx6flq9.ap-northeast-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
