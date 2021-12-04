@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-y6nfc_k=e&13!7*e2)kmyn+!(dvf8r8$*zyf66@e0xc!1xr)y%
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "api.otopura-be.com"
+    "api.otopura-be.com",
+    "localhost:3000"
 ]
 
 
@@ -158,7 +159,8 @@ LOGIN_URL = '/login/'
 
 # 許可するオリジン
 CORS_ORIGIN_WHITELIST = [
-    "https://otopura-be.com"
+    "https://otopura-be.com",
+    "http://localhost:3000"
 ]
 # レスポンスを公開する
 CORS_ALLOW_CREDENTIALS = True
