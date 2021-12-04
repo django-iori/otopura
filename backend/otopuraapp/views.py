@@ -116,9 +116,16 @@ def set_csrf_token(request):
     """
     return Response({"details": "CSRF cookie set"})
 
-@api_view(['GET'])
+"""@api_view(['GET'])
 def CsrfView(request):
     return JsonResponse({'token': get_token(request)})
+"""
+
+@api_view(['GET'])
+def CsrfView(request):
+    response = HttpResponse()
+    response.set_cookie('csrftoken', 'value')
+    return response
 
 @api_view(['GET'])
 def HelloWorld(request):
