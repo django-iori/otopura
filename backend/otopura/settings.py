@@ -207,5 +207,3 @@ CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken"]
 #クッキー付きの通信を許可
 CORS_ALLOW_CREDENTIALS = True
 
-CSRF_COOKIE_SAMESITE = 'None'
-CSRF_COOKIE_SECURE = True
