@@ -123,7 +123,7 @@ def CsrfView(request):
 
 @api_view(['GET'])
 def CsrfView(request):
-    response = Response()
+    response = HttpResponse()
     response.set_cookie('csrftoken', 'value', secure=True, samesite='None')
     return response
 
